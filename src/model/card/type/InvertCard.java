@@ -26,4 +26,9 @@ public class InvertCard extends BasicCard {
     super.executeAction(game, ctrl);
     game.invertDirection();
   }
+
+  @Override
+  public String path() {
+    return "file:assets/UnoCards/" + this.color.getName().toLowerCase() + "/reverse.png";
+  }
 }

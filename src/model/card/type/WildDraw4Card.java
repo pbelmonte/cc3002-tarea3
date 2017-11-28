@@ -17,4 +17,9 @@ public class WildDraw4Card extends WildCard {
     super.executeAction(game, ctrl);
     game.addToDrawWell(4);
   }
+  
+  @Override
+  public String path() {
+    return "file:assets/UnoCards/none/wild_draw_4.png";
+  }
 }

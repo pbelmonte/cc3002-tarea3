@@ -24,4 +24,10 @@ public class BasicCard extends AbstractCard {
   public boolean isFirstPlayable() {
     return true;
   }
+
+  @Override
+  public String path() {
+    return "file:assets/UnoCards/" + this.color.getName().toLowerCase() + "/"
+        + this.symbol.getName() + ".png";
+  }
 }

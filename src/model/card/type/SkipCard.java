@@ -26,4 +26,9 @@ public class SkipCard extends BasicCard {
     super.executeAction(game, ctrl);
     game.skipPlayer();
   }
+
+  @Override
+  public String path() {
+    return "file:assets/UnoCards/" + this.color.getName().toLowerCase() + "/block.png";
+  }
 }

@@ -29,7 +29,7 @@ public class ConsoleController implements IController {
     this.view = view;
     this.game = game;
     this.in = new Scanner(System.in);
-    showMessage("¡Bienvenido a JavaUNO!");
+    showMessage("Â¡Bienvenido a JavaUNO!");
     game.getCurrentPlayedCard().executeAction(game, this);
   }
 

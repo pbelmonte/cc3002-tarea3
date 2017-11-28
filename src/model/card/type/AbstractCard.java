@@ -63,4 +63,6 @@ public abstract class AbstractCard implements ICard {
     }
     return false;
   }
+  
+  public abstract String path();
 }

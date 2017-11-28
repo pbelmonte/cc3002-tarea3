@@ -54,5 +54,12 @@ public interface ICard {
    * @return true if the card is discardable on the discard pile.
    */
   boolean isDiscardable();
+  
+  /**
+   * Returns path to image in assets folder.
+   * 
+   * @return path
+   */
+  public String path();
 
 }

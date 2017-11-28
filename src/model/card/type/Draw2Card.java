@@ -26,4 +26,10 @@ public class Draw2Card extends BasicCard {
     super.executeAction(game, ctrl);
     game.addToDrawWell(2);
   }
+
+  @Override
+  public String path() {
+    return "file:assets/UnoCards/" + this.color.getName().toLowerCase() + "/"
+        + "draw_2.png";
+  }
 }

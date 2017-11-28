@@ -1,7 +1,6 @@
 package model.player;
 
 import java.util.ArrayList;
-
 import model.player.type.IPlayer;
 
 /**
@@ -39,7 +38,8 @@ public class UnoPlayerManager implements IPlayerManager {
   public void invertDirection() {
     direction = Direction.change(direction);
     nextPlayer = currentPlayer + direction.getValue();
-    if(players.size() ==  2) nextPlayer = currentPlayer;
+    if (players.size() == 2)
+      nextPlayer = currentPlayer;
     clamp();
   }
 

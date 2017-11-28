@@ -46,4 +46,9 @@ public class WildCard extends AbstractCard {
   public boolean isPlayableOver(ICard otherCard) {
     return true;
   }
+
+  @Override
+  public String path() {
+    return "file:assets/UnoCards/none/wild.png";
+  }
 }

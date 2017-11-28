@@ -42,4 +42,9 @@ public class NullCard extends AbstractCard {
     return instance;
   }
 
+  @Override
+  public String path() {
+    return "";
+  }
+
 }
