@@ -1,5 +1,6 @@
 package view;
 
+import java.util.ArrayList;
 import java.util.List;
 import javafx.application.Application;
 import javafx.geometry.Pos;
@@ -60,7 +61,7 @@ public class GameGUI extends Application {
 
   private Node makeHand() {
     GridPane hand = new GridPane();
-    hand.setHgap(30.0);
+    hand.setHgap(16.0);
     Button right = new Button(">");
     Button left = new Button("<");
     right.setPrefHeight(150);
@@ -68,6 +69,7 @@ public class GameGUI extends Application {
     hand.addColumn(0, left);
     hand.addColumn(8, right);
     List<ICard> mano = p1.getHand();
+    List<Button> botones = new ArrayList<Button>();
     for (int i = 0; i < p1.getHandSize(); i++) {
       Image card = new Image(mano.get(i).path());
       ImageView cardView = new ImageView(card);
@@ -76,7 +78,10 @@ public class GameGUI extends Application {
       cardView.setFitHeight(150); 
       cardView.setFitWidth(250);
       cardView.setPreserveRatio(true);
-      hand.addColumn(i + 1, cardView);
+      Button btn = new Button();
+      btn.setGraphic(cardView);
+      botones.add(btn);
+      hand.addColumn(i + 1, btn);
     }
     return hand;
   }
@@ -98,9 +103,11 @@ public class GameGUI extends Application {
     deckView.setFitHeight(150); 
     deckView.setFitWidth(250);
     deckView.setPreserveRatio(true);
+    Button deckButton = new Button();
+    deckButton.setGraphic(deckView);
     GridPane grid = new GridPane();
     grid.addColumn(0, discardView);
-    grid.addColumn(1, deckView);
+    grid.addColumn(1, deckButton);
     grid.setAlignment(Pos.CENTER);
     grid.setHgap(150.0);
     return grid;
